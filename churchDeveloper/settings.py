@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'churchDeveloper.urls'
@@ -125,10 +125,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-# Directorio donde se recopilarán los archivos estáticos para servir
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+# STATIC_TMP = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = '/static/'
+
+# os.makedirs{STATIC_TMP, exist_ok=True}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -136,10 +139,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 #cors configurations
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://5274-190-151-227-55.ngrok-free.app'
-]
+
 CORS_ALLOW_ALL_ORIGINS = True
 # Configuraciones opcionales:
 CORS_ALLOW_METHODS = [
