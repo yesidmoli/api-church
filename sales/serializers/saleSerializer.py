@@ -58,7 +58,7 @@ class SaleListSerializer(serializers.ModelSerializer):
 class AbonoSerializer(serializers.Serializer):
     sale_id = serializers.IntegerField()
     value = serializers.IntegerField()
-    concept = serializers.CharField(max_length=255)
+    concept = serializers.CharField(max_length=255, required=False )
 
     def create(self, validated_data):
         id = validated_data['sale_id']
