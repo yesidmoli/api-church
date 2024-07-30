@@ -1,7 +1,7 @@
 /migrations/
 db.sqlite3
-
-
+staticfiles/
+.DS_Store
 
 /users/__pycache__/
 /users/migrations/__pycache__/
