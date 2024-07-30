@@ -1,0 +1,14 @@
+/migrations/
+db.sqlite3
+
+
+
+/users/__pycache__/
+/users/migrations/__pycache__/
+/users/migrations/*
+!users/migrations/__init__.py
+
+/sales/__pycache__/
+/sales/migrations/__pycache__/
+/sales/migrations/*
+!sales/migrations/__init__.py
